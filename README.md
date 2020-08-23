@@ -51,3 +51,23 @@ Sample Problems:
 
 
 </details>
+
+## Hashing
+<details>
+<summary>Consistent Hash</summary>
+
+[Consistent Hash](https://www.toptal.com/big-data/consistent-hashing#:~:text=Consistent%20Hashing%20is%20a%20distributed,without%20affecting%20the%20overall%20system.)
+
+The algorithm summary:
+1. Sample k positions on the circle for each of the N storages, in total kN positions
+2. Map incoming item's hash value to the circle, store item to the nearest position's storage
+
+Good for:
+1. When a storage is removed, you only need to redistribute items stored on this storage to other storages, based on nearest position criteria
+2. When a new storage is added, you only need to move some of the items in other storages to the new storage, based on nearest position criteria
+3. The move of saved items can be minimized when storage number changes
+
+Sample Problems:
+- Distributed Cache Servers
+
+</details>
